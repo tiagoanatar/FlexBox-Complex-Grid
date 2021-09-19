@@ -1,0 +1,128 @@
+/* flex box layout */
+
+.flexbox {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flexbox .text_style {
+  padding: 50px;
+  font-size: 42px;
+  color: cornflowerblue;
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+  border: 1px solid blanchedalmond;
+  background-color: #ccc;
+}
+
+.div_1 {
+  flex: 1;
+}
+
+.div_1_right {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.div_2 {
+  flex: 1 100%;
+}
+
+.div_3 {
+  flex: 1 50%;
+}
+
+.div_4 {
+  flex: 1 50%;
+}
+
+/* row 2 */
+
+.div_5_left {
+  flex: 1;
+}
+
+.div_5 {
+  flex: 1 100%;
+}
+
+.div_6 {
+  flex: 1 100%;
+  min-height: 200px;
+}
+
+.div_7 {
+  flex: 1;
+}
+
+.div_8_right {
+  flex: 1;
+}
+
+.div_8 {
+  flex: 1 100%;
+  min-height: 200px;
+}
+
+.div_9 {
+  flex: 1;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .flexbox {
+    flex-flow: column wrap;
+  }
+
+  .div_1 {
+    flex: 1 100%;
+  }
+
+	.div_1_right {
+    flex: 1 100%;
+    flex-flow: row wrap-reverse;
+  }
+
+  /* row 2 */
+
+  .col2 {
+    flex: 1 100%;
+    flex-flow: row wrap;
+  }
+
+  .div_5_left {
+    flex: 1 50%;
+    flex-flow: row wrap;
+    order: 2;
+  }
+
+  .div_5 {
+    flex: 1 50%;
+  }
+
+  .div_6 {
+    min-height: auto;
+    flex: 1 50%;
+  }
+
+  .div_7 {
+    flex: 1 100%;
+    order: 1;
+  }
+
+  .div_8_right {
+    flex: 1 50%;
+    flex-flow: row wrap;
+    order: 3;
+  }
+
+  .div_8 {
+    flex: 1 50%;
+    min-height: auto;
+  }
+
+  .div_9 {
+    flex: 1 50%;
+  }
+
+}
